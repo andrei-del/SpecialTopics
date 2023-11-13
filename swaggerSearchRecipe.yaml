@@ -1,0 +1,152 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: Recipe Database API
+  description: API for managing recipes in Elasticsearch
+
+host: localhost:8000
+basePath: /api
+schemes:
+  - http
+
+paths:
+  /recipes:
+    get:
+      summary: Get all recipes
+      responses:
+        200:
+          description: Successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Recipe'
+
+  /recipes/{recipeId}:
+    get:
+      summary: Get a recipe by ID
+      parameters:
+        - name: recipeId
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          schema:
+            $ref: '#/definitions/Recipe'
+          examples:
+            'application/json':
+              id: '1'
+              name: 'Spaghetti Bolognese'
+              ingredients:
+                - 'spaghetti'
+                - 'ground beef'
+                - 'tomato sauce'
+                - 'onion'
+                - 'garlic'
+              description: 'Classic Italian pasta dish with a rich meat sauce.'
+              cookingTime: '30 minutes'
+        404:
+          description: Recipe not found
+
+    put:
+      summary: Update a recipe by ID
+      parameters:
+        - name: recipeId
+          in: path
+          required: true
+          type: string
+        - name: recipe
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Recipe'
+      responses:
+        200:
+          description: Successful operation
+          examples:
+            'application/json':
+              message: 'Recipe updated successfully.'
+        404:
+          description: Recipe not found
+
+    delete:
+      summary: Delete a recipe by ID
+      parameters:
+        - name: recipeId
+          in: path
+          required: true
+          type: string
+      responses:
+        204:
+          description: Recipe deleted
+          examples:
+            'application/json':
+              message: 'Recipe deleted successfully.'
+        404:
+          description: Recipe not found
+
+  /recipes/search:
+    get:
+      summary: Search recipes by ingredient
+      parameters:
+        - name: ingredient
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Recipe'
+          examples:
+            'application/json':
+              - id: '1'
+                name: 'Spaghetti Bolognese'
+                ingredients:
+                  - 'spaghetti'
+                  - 'ground beef'
+                  - 'tomato sauce'
+                  - 'onion'
+                  - 'garlic'
+                description: 'Classic Italian pasta dish with a rich meat sauce.'
+                cookingTime: '30 minutes'
+        404:
+          description: No recipes found with the specified ingredient
+
+  /recipes/add:
+    post:
+      summary: Add a new recipe
+      parameters:
+        - name: recipe
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Recipe'
+      responses:
+        201:
+          description: Recipe added successfully
+          examples:
+            'application/json':
+              message: 'Recipe added successfully.'
+        400:
+          description: Invalid request body
+
+definitions:
+  Recipe:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      ingredients:
+        type: array
+        items:
+          type: string
+      description:
+        type: string
+      cookingTime:
+        type: string
