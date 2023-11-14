@@ -1,7 +1,7 @@
 # SpecialTopics
 RecipeSearchApplication 
 
-Recipe Recommendation System is an application designed to provide users with personalized recipe suggestions based on their preferences, dietary restrictions and available ingredients. The goal of this system is to assist users in finding and preparing meals that align with their tastes and requirements.
+Recipe System is an application designed to provide users with personalized recipe suggestions based on their preferences, dietary restrictions and available ingredients. The goal of this system is to assist users in finding and preparing meals that align with their tastes and requirements.
 
 Components of Recipe Recommendation System:
 - Users: Users can specify their preferences. Baed on this, they will receive different recipes.
