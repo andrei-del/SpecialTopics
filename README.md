@@ -26,4 +26,4 @@ GET /ingredients/{ingredient_id}: Retrieve details of a specific ingredient.
 
 
 TECHNOLOGIES:
-ElasticSearch, Python,RESTful APIS,  Node.js?to see if I Will have a graphic interface. don't know 
+ElasticSearch, Java, RESTful APIS,  Node.js?to see if I Will have a graphic interface. don't know 
