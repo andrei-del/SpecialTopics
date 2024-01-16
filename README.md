@@ -40,55 +40,13 @@ The admin interface, accessible via a web-based GUI, offers the following capabi
 
 ## API Endpoints
 
-### Get all recipes
-
-- **Endpoint**: `/recipes`
-- **Method**: `GET`
-- **Parameters**:
-  - `ingredient` (query, optional): Search by ingredient
-  - `name` (query, optional): Search by name
-  - `cookingTime` (query, optional): Search by cooking time
-- **Response**: Array of [Recipe](#recipe) objects
-
-### Add a new recipe
-
-- **Endpoint**: `/recipes`
-- **Method**: `POST`
-- **Request Body**: [Recipe](#recipe) object
-- **Response**:
-  - `201`: Recipe added successfully.
-  - `400`: Invalid request body
-
-### Get a recipe by ID
-
-- **Endpoint**: `/recipes/{recipeId}`
-- **Method**: `GET`
-- **Parameters**:
-  - `recipeId` (path, required): ID of the recipe
-- **Response**:
-  - `200`: [Recipe](#recipe) object
-  - `404`: Recipe not found
-
-### Update a recipe by ID
-
-- **Endpoint**: `/recipes/{recipeId}`
-- **Method**: `PUT`
-- **Parameters**:
-  - `recipeId` (path, required): ID of the recipe
-- **Request Body**: [Recipe](#recipe) object
-- **Response**:
-  - `200`: Recipe updated successfully.
-  - `404`: Recipe not found
-
-### Delete a recipe by ID
-
-- **Endpoint**: `/recipes/{recipeId}`
-- **Method**: `DELETE`
-- **Parameters**:
-  - `recipeId` (path, required): ID of the recipe
-- **Response**:
-  - `204`: Recipe deleted successfully.
-  - `404`: Recipe not found
+| Endpoint               | Method | Parameters                           | Request Body | Response                      |
+|------------------------|--------|--------------------------------------|--------------|-------------------------------|
+| `/recipes`             | GET    | `ingredient` (optional)<br>`name` (optional)<br>`cookingTime` (optional) | -            | Array of [Recipe](#recipe)    |
+| `/recipes`             | POST   | -                                    | [Recipe](#recipe) | `201`: Recipe added successfully.<br>`400`: Invalid request body |
+| `/recipes/{recipeId}`  | GET    | `recipeId` (required)                | -            | `200`: [Recipe](#recipe)      |
+| `/recipes/{recipeId}`  | PUT    | `recipeId` (required)                | [Recipe](#recipe) | `200`: Recipe updated successfully.<br>`404`: Recipe not found |
+| `/recipes/{recipeId}`  | DELETE | `recipeId` (required)                | -            | `204`: Recipe deleted successfully.<br>`404`: Recipe not found |
 
 ## Data Model
 
@@ -100,5 +58,6 @@ The admin interface, accessible via a web-based GUI, offers the following capabi
   - `ingredients` (array of strings)
   - `description` (string)
   - `cookingTime` (string)
+
 
 
