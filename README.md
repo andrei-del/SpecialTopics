@@ -60,18 +60,33 @@ The admin interface, accessible via a web-based GUI, offers the following capabi
   - `cookingTime` (string)
 
 ## Index-Mapping:
-  mappings": {
-            "properties": {
-                "id": {"type": "keyword"},  # Change to keyword
-                "title": {"type": "text"},
-                "cooking_time": {"type": "integer"},
-                "ingredients": {
-                    "type": "nested",
-                    "properties": {
-                        "ingredient_name": {"type": "text"},
-                        "quantity": {"type": "integer"}
-                    }
-                }, "
-                "description": {"type": "text"}
-            }
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "title": {
+        "type": "text"
+      },
+      "cooking_time": {
+        "type": "integer"
+      },
+      "ingredients": {
+        "type": "nested",
+        "properties": {
+          "ingredient_name": {
+            "type": "text"
+          },
+          "quantity": {
+            "type": "integer"
+          }
         }
+      },
+      "description": {
+        "type": "text"
+      }
+    }
+  }
+}
+
