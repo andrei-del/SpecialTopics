@@ -20,6 +20,36 @@ paths:
             type: array
             items:
               $ref: '#/definitions/Recipe'
+      parameters:
+        - name: ingredient
+          in: query
+          type: string
+          description: Search by ingredient
+        - name: name
+          in: query
+          type: string
+          description: Search by name
+        - name: cookingTime
+          in: query
+          type: string
+          description: Search by cooking time
+
+    post:
+      summary: Add a new recipe
+      parameters:
+        - name: recipe
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Recipe'
+      responses:
+        201:
+          description: Recipe added successfully
+          examples:
+            'application/json':
+              message: 'Recipe added successfully.'
+        400:
+          description: Invalid request body
 
   /recipes/{recipeId}:
     get:
@@ -85,54 +115,6 @@ paths:
               message: 'Recipe deleted successfully.'
         404:
           description: Recipe not found
-
-  /recipes/search:
-    get:
-      summary: Search recipes by ingredient
-      parameters:
-        - name: ingredient
-          in: query
-          required: true
-          type: string
-      responses:
-        200:
-          description: Successful operation
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/Recipe'
-          examples:
-            'application/json':
-              - id: '1'
-                name: 'Spaghetti Bolognese'
-                ingredients:
-                  - 'spaghetti'
-                  - 'ground beef'
-                  - 'tomato sauce'
-                  - 'onion'
-                  - 'garlic'
-                description: 'Classic Italian pasta dish with a rich meat sauce.'
-                cookingTime: '30 minutes'
-        404:
-          description: No recipes found with the specified ingredient
-
-  /recipes/add:
-    post:
-      summary: Add a new recipe
-      parameters:
-        - name: recipe
-          in: body
-          required: true
-          schema:
-            $ref: '#/definitions/Recipe'
-      responses:
-        201:
-          description: Recipe added successfully
-          examples:
-            'application/json':
-              message: 'Recipe added successfully.'
-        400:
-          description: Invalid request body
 
 definitions:
   Recipe:
