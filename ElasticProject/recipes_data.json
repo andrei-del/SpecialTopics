@@ -1,0 +1,121 @@
+[
+    {
+        "id": "1",
+        "title": "Spaghetti Bolognese",
+        "cooking_time": 30,
+        "ingredients": [
+            {"ingredient_name": "Spaghetti", "quantity": 200},
+            {"ingredient_name": "Ground beef", "quantity": 500},
+            {"ingredient_name": "Tomato sauce", "quantity": 400}
+        ],
+        "description": "A classic Italian dish with savory meat sauce served over pasta."
+    },
+    {
+        "id": "2",
+        "title": "Chicken Caesar Salad",
+        "cooking_time": 20,
+        "ingredients": [
+            {"ingredient_name": "Chicken breast", "quantity": 300},
+            {"ingredient_name": "Romaine lettuce", "quantity": 1},
+            {"ingredient_name": "Parmesan cheese", "quantity": 100}
+        ],
+        "description": "A refreshing salad with grilled chicken, crisp lettuce, and Parmesan cheese."
+    },
+    {
+        "id": "3",
+        "title": "Vegetarian Pizza",
+        "cooking_time": 25,
+        "ingredients": [
+            {"ingredient_name": "Pizza dough", "quantity": 1},
+            {"ingredient_name": "Tomatoes", "quantity": 300},
+            {"ingredient_name": "Mushrooms", "quantity": 150},
+            {"ingredient_name": "Bell peppers", "quantity": 100},
+            {"ingredient_name": "Mozzarella cheese", "quantity": 200}
+        ],
+        "description": "A delicious pizza loaded with fresh vegetables and cheese."
+    },
+    {
+        "id": "4",
+        "title": "Beef Stir-Fry",
+        "cooking_time": 25,
+        "ingredients": [
+            {"ingredient_name": "Beef strips", "quantity": 400},
+            {"ingredient_name": "Broccoli", "quantity": 200},
+            {"ingredient_name": "Carrots", "quantity": 150},
+            {"ingredient_name": "Soy sauce", "quantity": 50}
+        ],
+        "description": "Quick and flavorful beef stir-fry with colorful vegetables."
+    },
+    {
+        "id": "5",
+        "title": "Chocolate Cake",
+        "cooking_time": 40,
+        "ingredients": [
+            {"ingredient_name": "Flour", "quantity": 250},
+            {"ingredient_name": "Sugar", "quantity": 200},
+            {"ingredient_name": "Cocoa powder", "quantity": 50},
+            {"ingredient_name": "Eggs", "quantity": 3},
+            {"ingredient_name": "Butter", "quantity": 150}
+        ],
+        "description": "Indulgent chocolate cake for dessert lovers."
+    },
+    {
+        "id": "6",
+        "title": "Pasta Primavera",
+        "cooking_time": 20,
+        "ingredients": [
+            {"ingredient_name": "Pasta", "quantity": 300},
+            {"ingredient_name": "Zucchini", "quantity": 150},
+            {"ingredient_name": "Cherry tomatoes", "quantity": 200},
+            {"ingredient_name": "Olive oil", "quantity": 50}
+        ],
+        "description": "A light and colorful pasta dish with fresh vegetables."
+    },
+    {
+        "id": "7",
+        "title": "Caprese Salad",
+        "cooking_time": 15,
+        "ingredients": [
+            {"ingredient_name": "Tomatoes", "quantity": 300},
+            {"ingredient_name": "Fresh mozzarella", "quantity": 200},
+            {"ingredient_name": "Basil leaves", "quantity": 20},
+            {"ingredient_name": "Balsamic glaze", "quantity": 30}
+        ],
+        "description": "A simple and elegant salad with tomatoes, mozzarella, and basil."
+    },
+    {
+        "id": "8",
+        "title": "Vegetable Curry",
+        "cooking_time": 30,
+        "ingredients": [
+            {"ingredient_name": "Mixed vegetables", "quantity": 400},
+            {"ingredient_name": "Coconut milk", "quantity": 300},
+            {"ingredient_name": "Curry paste", "quantity": 50}
+        ],
+        "description": "Hearty vegetable curry with a rich and flavorful coconut milk base."
+    },
+    {
+        "id": "9",
+        "title": "Chicken Alfredo Pasta",
+        "cooking_time": 25,
+        "ingredients": [
+            {"ingredient_name": "Chicken breast", "quantity": 300},
+            {"ingredient_name": "Fettuccine pasta", "quantity": 250},
+            {"ingredient_name": "Heavy cream", "quantity": 200},
+            {"ingredient_name": "Parmesan cheese", "quantity": 100}
+        ],
+        "description": "Creamy Alfredo pasta with tender chicken pieces."
+    },
+    {
+        "id": "10",
+        "title": "Tomato Basil Soup",
+        "cooking_time": 30,
+        "ingredients": [
+            {"ingredient_name": "Tomatoes", "quantity": 500},
+            {"ingredient_name": "Fresh basil", "quantity": 30},
+            {"ingredient_name": "Onions", "quantity": 150},
+            {"ingredient_name": "Chicken broth", "quantity": 400}
+        ],
+        "description": "A comforting soup with the flavors of ripe tomatoes and fresh basil."
+    }
+]
